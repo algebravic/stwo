@@ -20,6 +20,7 @@ use crate::core::fields::cm31::CM31;
 use crate::core::fields::m31::BaseField;
 use crate::core::fields::qm31::SecureField;
 use crate::core::fields::secure_column::{SecureColumnByCoords, SECURE_EXTENSION_DEGREE};
+use crate::core::compat::GetDisjointMut;
 
 /// An efficient structure for storing and operating on a arbitrary number of [`BaseField`] values.
 #[derive(Clone, Debug)]

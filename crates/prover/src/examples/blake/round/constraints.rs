@@ -6,6 +6,7 @@ use crate::constraint_framework::{EvalAtRow, RelationEntry};
 use crate::core::fields::m31::BaseField;
 use crate::core::fields::qm31::SecureField;
 use crate::examples::blake::{Fu32, STATE_SIZE};
+use crate::core::compat::GetDisjointMut;
 
 const INV16: BaseField = BaseField::from_u32_unchecked(1 << 15);
 const TWO: BaseField = BaseField::from_u32_unchecked(2);

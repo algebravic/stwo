@@ -13,6 +13,7 @@ use crate::core::fields::qm31::SecureField;
 use crate::core::fields::secure_column::SecureColumnByCoords;
 use crate::core::poly::circle::{CanonicCoset, CircleEvaluation, CirclePoly, SecureCirclePoly};
 use crate::core::poly::BitReversedOrder;
+use crate::core::compat::GetDisjointMut;
 
 /// Accumulates N evaluations of u_i(P0) at a single point.
 /// Computes f(P0), the combined polynomial at that point.

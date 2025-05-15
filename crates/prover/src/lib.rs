@@ -23,3 +23,7 @@ pub mod math;
 
 #[cfg(feature = "tracing")]
 pub mod tracing;
+
+pub mod core {
+    pub mod compat;
+}
