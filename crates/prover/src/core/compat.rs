@@ -28,10 +28,14 @@ impl<T> GetManyMut<T> for [T] {
             }
         }
 
-        // Get the mutable references
+        // Get the mutable references using raw pointers to avoid borrowing issues
         let mut result = Vec::with_capacity(N);
+        let ptr = self.as_mut_ptr();
         for &index in &indices {
-            result.push(&mut self[index]);
+            // SAFETY: We've already checked that the indices are valid and not duplicates
+            unsafe {
+                result.push(&mut *ptr.add(index));
+            }
         }
 
         // Convert Vec to array
